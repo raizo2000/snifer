@@ -1,0 +1,45 @@
+# Sistema de Autenticación y Escáner de Dispositivos en Red
+
+## Descripción
+
+Este proyecto consiste en un sistema integrado que combina un formulario de inicio de sesión (login) y un escáner de dispositivos en red. La interfaz gráfica está construida con PyQt5 y se utiliza Scapy para la detección de dispositivos en la red. Además, se implementa un módulo de autenticación para gestionar usuarios.
+
+## Componentes
+
+### main.py
+
+- Punto de entrada principal para ejecutar la aplicación.
+- Inicializa la aplicación PyQt5 y muestra la ventana de inicio de sesión (`LoginForm`).
+
+### login.py
+
+- Contiene la implementación del formulario de inicio de sesión (`LoginForm`) y la ventana de creación de usuarios (`CrearUsuarioWindow`).
+- Utiliza el módulo `Autenticador` para cargar, guardar y verificar las credenciales de usuario.
+
+### snifer.py
+
+- Implementa el escáner de dispositivos en la red (`EscanerDispositivos`) mediante el uso de Scapy.
+- Proporciona una interfaz gráfica que permite al usuario ingresar la dirección IP de la red a escanear.
+- Muestra los resultados en una tabla con detalles como IP, MAC, nombre del dispositivo, tipo y Usuario-Agent.
+
+## Uso
+
+Ejecutar el archivo `main.py` para iniciar la aplicación:
+
+```bash
+python main.py
+```
+
+## Instalacion de Depencias
+
+```bash
+pip install PyQt5 QDarkStyle scapy-python3 manuf requests
+```
+
+## Requisitos
+- Python 3.x
+- PyQt5
+- QDarkStyle
+- Scapy
+- Manuf
+- Requests
